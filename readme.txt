@@ -46,3 +46,4 @@ to collect weights  just cd desktop\python3 and type   comm5_driver_directx.py.c
 I'll let you create the shortcuts 
 -Steve
 small change
+another small change
