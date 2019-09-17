@@ -1,0 +1,147 @@
+Source:gUSBampADC int AcquisitionMode= 2 0 0 2 // data acquisition mode:  0: analog signal acquisition, 1: calibration, 2: impedance (enumeration)
+Source:Alignment:AlignmentFilter int AlignChannels= 1 0 0 1 // align channels in time (0=no, 1=yes)
+Application:Window:StimulusTask int AllowExt= 1 0 0 1 // Allow External Devices for Presentation (0=no, 1=yes) (boolean)
+Visualize:Application%20Window:ApplicationBase:%:DisplayVisualization int AppWindowSpatialDecimation= 8 8 1 % // Application window decimation (shrinking) factor
+Visualize:Application%20Window:ApplicationBase:%:DisplayVisualization int AppWindowTemporalDecimation= 4 16 1 % // Application window time decimation factor
+System:Configuration matrix ApplicationFilterChain= 3 { Filter%20Name Position%20String } ConnectorInput 2.9999 P3SpellerTask 3 ConnectorOutput 3.9999 // Application filter chain
+System:Core%20Connections string ApplicationIP= 192.168.56.1 127.0.0.1 % % // the Application module's listening IP
+System:Core%20Connections string ApplicationPort= 58634 4200 1024 65535 // the Application module's listening port
+System:Configuration matrix ApplicationVersion= { Framework Revision Build } 1 2.0 2005,%20 Do%2015%20Mai%202008%2016:00:30%20CEST // Application version information
+Application:Audio%20Stimuli:P3SpellerTask matrix AudioStimuliColsFiles= 6 { filename } ./voice/a.wav ./voice/b.wav ./voice/c.wav ./prog/voice/d.wav ./prog/voice/e.wav ./prog/voice/f.wav // audio stimuli column files 
+Application:Audio%20Stimuli:P3SpellerTask int AudioStimuliOn= 0 0 0 1 // Audio Stimuli Mode (0=no, 1=yes) (boolean)
+Application:Audio%20Stimuli:P3SpellerTask matrix AudioStimuliRowsFiles= 6 { filename } ./voice/1.wav ./voice/2.wav ./voice/3.wav ./voice/4.wav ./voice/5.wav ./voice/6.wav // audio stimuli rows files 
+Application:Checkerboard:P3SpellerTask int AutoFlash= 10 10 0 % // Number of milliseconds for Autoflash
+Application:Speller%20Targets:P3SpellerTask stringlist BackgroundColor= 1 0x00000000 0x505050 % % // target background color (color)
+Application:Checkerboard:P3SpellerTask matrix BrightColors= 72 { Color } 0xE6E6E6 0xA2985C 0xE60000 0xE6E6E6 0xA2985C 0xE60000 0xE6E6E6 0xA2985C 0x972FFF 0xF79747 0x00E200 0x972FFF 0xF79747 0x00E200 0x972FFF 0xF79747 0xF4EE00 0x2FC0CF 0xE600AA 0xF4EE00 0x2FC0CF 0xE600AA 0xF4EE00 0x2FC0CF 0xE6E6E6 0xA2985C 0xE60000 0xE6E6E6 0xA2985C 0xE60000 0xE6E6E6 0xA2985C 0x972FFF 0xF79747 0x00E200 0x972FFF 0xF79747 0x00E200 0x972FFF 0xF79747 0xF4EE00 0x2FC0CF 0xE600AA 0xF4EE00 0x2FC0CF 0xE600AA 0xF4EE00 0x2FC0CF 0xE6E6E6 0xA2985C 0xE60000 0xE6E6E6 0xA2985C 0xE60000 0xE6E6E6 0xA2985C 0x972FFF 0xF79747 0x00E200 0x972FFF 0xF79747 0x00E200 0x972FFF 0xF79747 0xF4EE00 0x2FC0CF 0xE600AA 0xF4EE00 0x2FC0CF 0xE600AA 0xF4EE00 0x2FC0CF // speller target properties
+Source:Signal%20Properties:DataIOFilter list ChannelNames= 0 // list of channel names
+Filtering:LinearClassifier matrix Classifier= 390 { input%20channel input%20element%20(bin) output%20channel 4 } 1 14 1 0.75826 1 15 1 0.75826 1 16 1 0.75826 1 17 1 0.75826 1 18 1 0.75826 1 19 1 0.75826 1 20 1 0.75826 1 21 1 0.75826 1 22 1 0.75826 1 23 1 0.75826 1 24 1 0.75826 1 25 1 0.75826 1 26 1 0.75826 1 79 1 0.47110 1 80 1 0.47110 1 81 1 0.47110 1 82 1 0.47110 1 83 1 0.47110 1 84 1 0.47110 1 85 1 0.47110 1 86 1 0.47110 1 87 1 0.47110 1 88 1 0.47110 1 89 1 0.47110 1 90 1 0.47110 1 91 1 0.47110 1 105 1 0.89271 1 106 1 0.89271 1 107 1 0.89271 1 108 1 0.89271 1 109 1 0.89271 1 110 1 0.89271 1 111 1 0.89271 1 112 1 0.89271 1 113 1 0.89271 1 114 1 0.89271 1 115 1 0.89271 1 116 1 0.89271 1 117 1 0.89271 2 105 1 -1.83488 2 106 1 -1.83488 2 107 1 -1.83488 2 108 1 -1.83488 2 109 1 -1.83488 2 110 1 -1.83488 2 111 1 -1.83488 2 112 1 -1.83488 2 113 1 -1.83488 2 114 1 -1.83488 2 115 1 -1.83488 2 116 1 -1.83488 2 117 1 -1.83488 2 131 1 2.14705 2 132 1 2.14705 2 133 1 2.14705 2 134 1 2.14705 2 135 1 2.14705 2 136 1 2.14705 2 137 1 2.14705 2 138 1 2.14705 2 139 1 2.14705 2 140 1 2.14705 2 141 1 2.14705 2 142 1 2.14705 2 143 1 2.14705 2 144 1 -2.55663 2 145 1 -2.55663 2 146 1 -2.55663 2 147 1 -2.55663 2 148 1 -2.55663 2 149 1 -2.55663 2 150 1 -2.55663 2 151 1 -2.55663 2 152 1 -2.55663 2 153 1 -2.55663 2 154 1 -2.55663 2 155 1 -2.55663 2 156 1 -2.55663 2 157 1 2.45405 2 158 1 2.45405 2 159 1 2.45405 2 160 1 2.45405 2 161 1 2.45405 2 162 1 2.45405 2 163 1 2.45405 2 164 1 2.45405 2 165 1 2.45405 2 166 1 2.45405 2 167 1 2.45405 2 168 1 2.45405 2 169 1 2.45405 3 92 1 -2.16392 3 93 1 -2.16392 3 94 1 -2.16392 3 95 1 -2.16392 3 96 1 -2.16392 3 97 1 -2.16392 3 98 1 -2.16392 3 99 1 -2.16392 3 100 1 -2.16392 3 101 1 -2.16392 3 102 1 -2.16392 3 103 1 -2.16392 3 104 1 -2.16392 3 144 1 6.90659 3 145 1 6.90659 3 146 1 6.90659 3 147 1 6.90659 3 148 1 6.90659 3 149 1 6.90659 3 150 1 6.90659 3 151 1 6.90659 3 152 1 6.90659 3 153 1 6.90659 3 154 1 6.90659 3 155 1 6.90659 3 156 1 6.90659 3 157 1 -2.54217 3 158 1 -2.54217 3 159 1 -2.54217 3 160 1 -2.54217 3 161 1 -2.54217 3 162 1 -2.54217 3 163 1 -2.54217 3 164 1 -2.54217 3 165 1 -2.54217 3 166 1 -2.54217 3 167 1 -2.54217 3 168 1 -2.54217 3 169 1 -2.54217 3 170 1 3.24916 3 171 1 3.24916 3 172 1 3.24916 3 173 1 3.24916 3 174 1 3.24916 3 175 1 3.24916 3 176 1 3.24916 3 177 1 3.24916 3 178 1 3.24916 3 179 1 3.24916 3 180 1 3.24916 3 181 1 3.24916 3 182 1 3.24916 4 66 1 2.99679 4 67 1 2.99679 4 68 1 2.99679 4 69 1 2.99679 4 70 1 2.99679 4 71 1 2.99679 4 72 1 2.99679 4 73 1 2.99679 4 74 1 2.99679 4 75 1 2.99679 4 76 1 2.99679 4 77 1 2.99679 4 78 1 2.99679 4 92 1 -3.93348 4 93 1 -3.93348 4 94 1 -3.93348 4 95 1 -3.93348 4 96 1 -3.93348 4 97 1 -3.93348 4 98 1 -3.93348 4 99 1 -3.93348 4 100 1 -3.93348 4 101 1 -3.93348 4 102 1 -3.93348 4 103 1 -3.93348 4 104 1 -3.93348 4 118 1 1.87716 4 119 1 1.87716 4 120 1 1.87716 4 121 1 1.87716 4 122 1 1.87716 4 123 1 1.87716 4 124 1 1.87716 4 125 1 1.87716 4 126 1 1.87716 4 127 1 1.87716 4 128 1 1.87716 4 129 1 1.87716 4 130 1 1.87716 4 157 1 3.89690 4 158 1 3.89690 4 159 1 3.89690 4 160 1 3.89690 4 161 1 3.89690 4 162 1 3.89690 4 163 1 3.89690 4 164 1 3.89690 4 165 1 3.89690 4 166 1 3.89690 4 167 1 3.89690 4 168 1 3.89690 4 169 1 3.89690 5 66 1 -2.62441 5 67 1 -2.62441 5 68 1 -2.62441 5 69 1 -2.62441 5 70 1 -2.62441 5 71 1 -2.62441 5 72 1 -2.62441 5 73 1 -2.62441 5 74 1 -2.62441 5 75 1 -2.62441 5 76 1 -2.62441 5 77 1 -2.62441 5 78 1 -2.62441 5 92 1 3.07718 5 93 1 3.07718 5 94 1 3.07718 5 95 1 3.07718 5 96 1 3.07718 5 97 1 3.07718 5 98 1 3.07718 5 99 1 3.07718 5 100 1 3.07718 5 101 1 3.07718 5 102 1 3.07718 5 103 1 3.07718 5 104 1 3.07718 5 105 1 -8.63816 5 106 1 -8.63816 5 107 1 -8.63816 5 108 1 -8.63816 5 109 1 -8.63816 5 110 1 -8.63816 5 111 1 -8.63816 5 112 1 -8.63816 5 113 1 -8.63816 5 114 1 -8.63816 5 115 1 -8.63816 5 116 1 -8.63816 5 117 1 -8.63816 5 157 1 -4.73389 5 158 1 -4.73389 5 159 1 -4.73389 5 160 1 -4.73389 5 161 1 -4.73389 5 162 1 -4.73389 5 163 1 -4.73389 5 164 1 -4.73389 5 165 1 -4.73389 5 166 1 -4.73389 5 167 1 -4.73389 5 168 1 -4.73389 5 169 1 -4.73389 6 66 1 -3.06213 6 67 1 -3.06213 6 68 1 -3.06213 6 69 1 -3.06213 6 70 1 -3.06213 6 71 1 -3.06213 6 72 1 -3.06213 6 73 1 -3.06213 6 74 1 -3.06213 6 75 1 -3.06213 6 76 1 -3.06213 6 77 1 -3.06213 6 78 1 -3.06213 6 79 1 1.99916 6 80 1 1.99916 6 81 1 1.99916 6 82 1 1.99916 6 83 1 1.99916 6 84 1 1.99916 6 85 1 1.99916 6 86 1 1.99916 6 87 1 1.99916 6 88 1 1.99916 6 89 1 1.99916 6 90 1 1.99916 6 91 1 1.99916 6 92 1 4.75919 6 93 1 4.75919 6 94 1 4.75919 6 95 1 4.75919 6 96 1 4.75919 6 97 1 4.75919 6 98 1 4.75919 6 99 1 4.75919 6 100 1 4.75919 6 101 1 4.75919 6 102 1 4.75919 6 103 1 4.75919 6 104 1 4.75919 6 131 1 -1.92001 6 132 1 -1.92001 6 133 1 -1.92001 6 134 1 -1.92001 6 135 1 -1.92001 6 136 1 -1.92001 6 137 1 -1.92001 6 138 1 -1.92001 6 139 1 -1.92001 6 140 1 -1.92001 6 141 1 -1.92001 6 142 1 -1.92001 6 143 1 -1.92001 6 144 1 -4.42793 6 145 1 -4.42793 6 146 1 -4.42793 6 147 1 -4.42793 6 148 1 -4.42793 6 149 1 -4.42793 6 150 1 -4.42793 6 151 1 -4.42793 6 152 1 -4.42793 6 153 1 -4.42793 6 154 1 -4.42793 6 155 1 -4.42793 6 156 1 -4.42793 6 170 1 -3.81258 6 171 1 -3.81258 6 172 1 -3.81258 6 173 1 -3.81258 6 174 1 -3.81258 6 175 1 -3.81258 6 176 1 -3.81258 6 177 1 -3.81258 6 178 1 -3.81258 6 179 1 -3.81258 6 180 1 -3.81258 6 181 1 -3.81258 6 182 1 -3.81258 6 183 1 1.08819 6 184 1 1.08819 6 185 1 1.08819 6 186 1 1.08819 6 187 1 1.08819 6 188 1 1.08819 6 189 1 1.08819 6 190 1 1.08819 6 191 1 1.08819 6 192 1 1.08819 6 193 1 1.08819 6 194 1 1.08819 6 195 1 1.08819 7 105 1 10.00000 7 106 1 10.00000 7 107 1 10.00000 7 108 1 10.00000 7 109 1 10.00000 7 110 1 10.00000 7 111 1 10.00000 7 112 1 10.00000 7 113 1 10.00000 7 114 1 10.00000 7 115 1 10.00000 7 116 1 10.00000 7 117 1 10.00000 7 118 1 -4.58055 7 119 1 -4.58055 7 120 1 -4.58055 7 121 1 -4.58055 7 122 1 -4.58055 7 123 1 -4.58055 7 124 1 -4.58055 7 125 1 -4.58055 7 126 1 -4.58055 7 127 1 -4.58055 7 128 1 -4.58055 7 129 1 -4.58055 7 130 1 -4.58055 7 170 1 -2.11630 7 171 1 -2.11630 7 172 1 -2.11630 7 173 1 -2.11630 7 174 1 -2.11630 7 175 1 -2.11630 7 176 1 -2.11630 7 177 1 -2.11630 7 178 1 -2.11630 7 179 1 -2.11630 7 180 1 -2.11630 7 181 1 -2.11630 7 182 1 -2.11630 8 1 1 2.31756 8 2 1 2.31756 8 3 1 2.31756 8 4 1 2.31756 8 5 1 2.31756 8 6 1 2.31756 8 7 1 2.31756 8 8 1 2.31756 8 9 1 2.31756 8 10 1 2.31756 8 11 1 2.31756 8 12 1 2.31756 8 13 1 2.31756 // Linear classification matrix in sparse representation
+Source:gUSBampADC int CommonGround= 1 0 0 1 // internally connect GNDs from all blocks:  0: false, 1: true (enumeration)
+Source:gUSBampADC int CommonReference= 1 0 0 1 // internally connect Refs from all blocks:  0: false, 1: true (enumeration)
+Application:Checkerboard:P3SpellerTask float Confidence= 0.0 5.0 0.0 % // Confidence in number of stdev's from mean
+Connector:ConnectorInput string ConnectorInputAddress= localhost:20321 localhost:20320 % % // IP address/port to read from, e.g. localhost:20320
+Connector:ConnectorInput list ConnectorInputFilter= 1 * // list of state names or signal elements to allow, "*" for any, signal elements as in "Signal(1,0)"
+Connector:ConnectorOutput string ConnectorOutputAddress= localhost:20320 localhost:20320 % % // IP address/port to write to, e.g. localhost:20320
+Storage:Data%20Location:P3SpellerTask string DataDirectory= ..\data ..\data % % // path to top level data directory (directory)
+Application:Speller:P3SpellerTask string DestinationAddress= % // network address for speller output in IP:port format
+Source:gUSBampADC string DeviceIDMaster= auto // deviceID for the device whose SYNC goes to the slaves
+Source:gUSBampADC list DeviceIDs= 1 auto // list of USBamps to be used (or auto)
+Source:gUSBampADC int DigitalInput= 0 0 0 1 // enable digital input:  0: false, 1: true (enumeration)
+Source:gUSBampADC int DigitalOutput= 0 0 0 1 // enable digital output on block acquisition (boolean)
+Application:Checkerboard:P3SpellerTask matrix DimColors= 72 { Color } 0x737373 0x514C2E 0x730000 0x737373 0x514C2E 0x730000 0x737373 0x514C2E 0x4B97FF 0x7BCBA3 0x007100 0x4B97FF 0x7BCBA3 0x007100 0x4B97FF 0x7BCBA3 0x7A7700 0x17E067 0x730055 0x7A7700 0x17E067 0x730055 0x7A7700 0x17E067 0x737373 0x514C2E 0x730000 0x737373 0x514C2E 0x730000 0x737373 0x514C2E 0x4B97FF 0x7BCBA3 0x007100 0x4B97FF 0x7BCBA3 0x007100 0x4B97FF 0x7BCBA3 0x7A7700 0x17E067 0x730055 0x7A7700 0x17E067 0x730055 0x7A7700 0x17E067 0x737373 0x514C2E 0x730000 0x737373 0x514C2E 0x730000 0x737373 0x514C2E 0x4B97FF 0x7BCBA3 0x007100 0x4B97FF 0x7BCBA3 0x007100 0x4B97FF 0x7BCBA3 0x7A7700 0x17E067 0x730055 0x7A7700 0x17E067 0x730055 0x7A7700 0x17E067 // speller target properties
+Application:Result%20Processing:StimulusTask int DisplayResults= 0 1 0 1 // display results of copy/free spelling (boolean)
+Application:Sequencing:StimulusTask int DoubleFlashMode= 0 0 0 2 // Type of Double Flash: 0 none, 1 composite, 2 separate (enumeration)
+Filtering:P3TemporalFilter int EpochLength= 800ms 500ms 0 % // Length of data epoch from stimulus onset
+Filtering:P3TemporalFilter int EpochsToAverage= 1 1 0 % // Number of epochs to average
+Application:Checkerboard:P3SpellerTask int ExtApp= 1 0 0 1 // Use external UDP presentation application (0=no, 1=yes) (boolean)
+Application:Checkerboard:P3SpellerTask int ExtDev= 0 0 0 1 // Use External Serial Presentation Device (0=no, 1=yes) (boolean)
+Application:Checkerboard:P3SpellerTask int ExtraHalf= 0 0 0 1 // Present an Extra Half Set (0=no, 1=yes) (boolean)
+Source:gUSBampADC int FilterEnabled= 1 1 0 1 // Enable pass band filter (0=no, 1=yes)
+Source:gUSBampADC float FilterHighPass= 0.5 0.1 0 50 // high pass filter for pass band
+Source:gUSBampADC float FilterLowPass= 30 60 0 4000 // low pass filter for pass band
+Source:gUSBampADC int FilterModelOrder= 8 8 1 12 // filter model order for pass band
+Source:gUSBampADC int FilterType= 1 1 1 2 // filter type for pass band (1=BUTTERWORTH, 2=CHEBYSHEV)
+Application:Speller:P3SpellerTask int FirstActiveMenu= 1 1 1 % // Index of first active menu
+Storage:Documentation:DataIOFilter string ID_Amp= % // BCI2000 Amp Code
+Storage:Documentation:DataIOFilter string ID_Montage= % // BCI2000 Cap Montage Code
+Storage:Documentation:DataIOFilter string ID_System= % // BCI2000 System Code
+Application:Sequencing:StimulusTask float ISIMaxDuration= 2 80ms 0 % // maximum duration of inter-stimulus interval
+Application:Sequencing:StimulusTask float ISIMinDuration= 2 80ms 0 % // minimum duration of inter-stimulus interval
+Application:Speller%20Targets:P3SpellerTask floatlist IconHighlightFactor= 1 3 0.5 0 % // scale factor for highlighted icon pixel values
+Application:Speller%20Targets:P3SpellerTask intlist IconHighlightMode= 1 1 1 0 4 // icon highlight method 0: Show/Hide, 1: Intensify, 2: Grayscale, 3: Invert, 4: Dim    (enumeration)
+Source:gUSBampADC floatlist Impedance= 16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 % % // impedance between each channel and GND (do not change)
+Source:gUSBampADC string ImpedanceTime= % // impedance measurement time stamp (do not change)
+Source:gUSBampADC int ImpedanceTimeValid= 5 5 0 9999999 // validity in minutes of impedance measurement
+Application:Result%20Processing:StimulusTask int InterpretMode= 1 0 0 2 // interpretation of results: 0 none, 1 online free mode, 2 copy mode (enumeration)
+Application:Localization:Localization string Language= Default Default % % // Language for user messages
+Application:Localization:Localization matrix LocalizedStrings= { German } { TIME%20OUT%20!!! Waiting%20to%20start%20... } Zeit%20abgelaufen! Warte%20... // Localized user messages
+Application:Checkerboard:P3SpellerTask int MaxTries= 1 100 1 % // Maximum tries before resetting confidence level
+Application:Checkerboard:P3SpellerTask int MultiColor= 0 0 0 1 // MultiColor Mode (0=no, 1=yes) (boolean)
+Source:gUSBampADC int NotchEnabled= 1 1 0 1 // Enable notch (0=no, 1=yes)
+Source:gUSBampADC float NotchHighPass= 58 58 0 70 // high pass filter for notch filter
+Source:gUSBampADC float NotchLowPass= 62 62 0 4000 // low pass filter for notch filter
+Source:gUSBampADC int NotchModelOrder= 4 4 1 10 // filter model order for notch filter
+Source:gUSBampADC int NotchType= 1 1 1 2 // filter type for pass band (1=CHEBYSHEV, 2=BUTTERWORTH)
+Source:gUSBampADC int NumBuffers= 5 1 2 32 // number of software buffers to use
+Application:Checkerboard:P3SpellerTask int NumInCycle= 100 100 5 % // Number of Sequences to Cycle Through
+Application:Speller%20Targets:P3SpellerTask intlist NumMatrixColumns= 1 3 6 1 % // display matrices' column number(s)
+Application:Speller%20Targets:P3SpellerTask intlist NumMatrixRows= 1 2 6 0 % // display matrices' row number(s)
+Application:Sequencing:P3SpellerTask int NumberOfSequences= 1 15 1 % // number of sequences in a set of intensifications
+Application:Checkerboard:P3SpellerTask int OneDimOnly= 0 0 0 1 // Use Only First Color For Dim (0=no, 1=yes) (boolean)
+System:Configuration matrix OperatorVersion= { Framework Revision Build } 1 2.0 2005,%20 Do%2015%20Mai%202008%2016:00:30%20CEST // operator module version information
+Application:Sequencing:StimulusTask float PostRunDuration= 4s 0 0 % // pause following last sequence
+Application:Sequencing:StimulusTask float PostSequenceDuration= 4s 2s 0 % // pause following sequences/sets of intensifications
+Application:Sequencing:StimulusTask float PreRunDuration= 4s 0 0 % // pause preceding first sequence
+Application:Sequencing:StimulusTask float PreSequenceDuration= 4s 2s 0 % // pause preceding sequences/sets of intensifications
+Application:Checkerboard:P3SpellerTask int Rainbow= 0 0 0 1 // Rainbow Mode (0=no, 1=yes) (boolean)
+Application:Checkerboard:P3SpellerTask matrix RainbowColors= 7 { Color } 0x00FF0000 0x00FFA500 0x00FFFF00 0x00408040 0x002020FF 0x00A020F0 0x00C0C0C0 // speller target properties
+Application:Checkerboard:P3SpellerTask int ReadStimuli= 0 0 0 1 // Read Stimulus Set from file (0=no, 1=yes) (boolean)
+Source:Signal%20Properties:DataIOFilter int SampleBlockSize= 8 32 1 % // number of samples transmitted at a time
+Source:Signal%20Properties:DataIOFilter int SamplingRate= 256 256Hz 1 % // sample rate
+Storage:Documentation:BCI2000FileWriter int SavePrmFile= 0 1 0 1 // save additional parameter file (0=no, 1=yes) (boolean)
+Application:Checkerboard:P3SpellerTask string SerialDev= % // COMx: Serial Port Connected to External Device
+Application:Checkerboard:P3SpellerTask int SetsPerSequence= 5 10 1 % // Number of Sets of Stimuli Per Sequence
+System:Configuration matrix SignalProcessingFilterChain= 3 { Filter%20Name Position%20String } SpatialFilter 2.A P3TemporalFilter 2.B LinearClassifier 2.C // SignalProcessing filter chain
+System:Core%20Connections string SignalProcessingIP= 192.168.56.1 127.0.0.1 % % // the SignalProcessing module's listening IP
+System:Core%20Connections string SignalProcessingPort= 58632 4200 1024 65535 // the SignalProcessing module's listening port
+System:Configuration matrix SignalProcessingVersion= { Framework Revision Build } 1 2.0 2005,%20 Do%2015%20Mai%202008%2016:00:30%20CEST // SignalProcessing version information
+System:Configuration matrix SignalSourceFilterChain= 8 { Filter%20Name Position%20String } DataIOFilter 0 BCI2000FileWriter 1 EDFFileWriter 1 GDFFileWriter 1 NullFileWriter 1 gUSBampADC 1 AlignmentFilter 1.1 TransmissionFilter 1.2 // SignalSource filter chain
+System:Core%20Connections string SignalSourceIP= 192.168.56.1 127.0.0.1 % % // the SignalSource module's listening IP
+System:Core%20Connections string SignalSourcePort= 58629 4200 1024 65535 // the SignalSource module's listening port
+System:Configuration matrix SignalSourceVersion= { Framework Revision Build } 1 2.x % 13:24:55%20May%2026%202011 // SignalSource version information
+Source:gUSBampADC int SignalType= 0 0 0 1 // numeric type of output signal:  0: int16, 1: float32 (enumeration)
+Source:Signal%20Properties:DataIOFilter int SourceCh= 8 16 1 % // number of digitized and stored channels
+Source:gUSBampADC intlist SourceChDevices= 1 8 8 1 8 // number of digitized channels total
+Source:Signal%20Properties:DataIOFilter floatlist SourceChGain= 8 0.033 0.033 0.033 0.033 0.033 0.033 0.033 0.033 0.003 % % // gain for each channel (A/D units -> muV)
+Source:gUSBampADC intlist SourceChList= 8 1 2 3 4 13 14 15 16 0 1 128 // list of channels to digitize
+Source:Signal%20Properties:DataIOFilter floatlist SourceChOffset= 8 0 0 0 0 0 0 0 0 0 % % // Offset for channels in A/D units
+Source:Alignment:AlignmentFilter floatlist SourceChTimeOffset= 0 0 % % // time offsets for all source channels (may be empty)
+Visualize:Source%20Signal:DataIOFilter int SourceMax= 100uV 100muV % % // raw signal vis Max Value
+Visualize:Source%20Signal:DataIOFilter int SourceMin= -100uV -100muV % % // raw signal vis Min Value
+Filtering:SpatialFilter matrix SpatialFilter= 8 8 1.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 1.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 1.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 1.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 1.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 1.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 1.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 1.00000 // columns represent input channels, rows represent output channels
+Filtering:SpatialFilter:SpatialFilter intlist SpatialFilterCAROutput= 0 // list of output channels for the CAR if used
+Filtering:SpatialFilter int SpatialFilterType= 1 2 0 3 // spatial filter type 0: none, 1: full matrix, 2: sparse matrix, 3: common average reference (CAR) (enumeration)
+Application:Checkerboard:P3SpellerTask int Standard= 0 0 0 1 // Standard Row-Column Mode (0=no, 1=yes) (boolean)
+System:State%20Vector int StateVectorLength= 34 16 1 30 // length of the state vector in bytes
+Application:Speller:P3SpellerTask float StatusBarSize= 10 0 0 100 // size of status bar in percent of screen height
+Application:Speller:P3SpellerTask float StatusBarTextHeight= 5 0 0 100 // size of status bar text in percent of screen height
+Application:Sequencing:StimulusTask float StimulusDuration= 6 40ms 0 % // stimulus duration
+Application:Checkerboard:P3SpellerTask string StimulusFile= % // Name of File containing Stimulus Set
+Storage:Documentation:BCI2000FileWriter string StorageTime= Wed%20Feb%2025%2012:06:32%202009 // time of beginning of data storage
+Storage:Session:DataIOFilter string SubjectName= bci Name % % // subject alias
+Storage:Session:DataIOFilter string SubjectRun= 01 00 % % // two-digit run number
+Storage:Session:DataIOFilter string SubjectSession= 003 001 % % // three-digit session number
+Application:Speller%20Targets:P3SpellerTask matrix TargetDefinitions= 6 5 1 1 1 % % 2 2 1 % % 3 3 1 % % 4 4 1 % % 5 5 1 % % 6 6 1 % % // speller target properties
+Visualize:P3TemporalFilter int TargetERPChannel= 4 1 0 128 // Input channel for which to display ERP data
+Application:Speller%20Targets:P3SpellerTask floatlist TargetHeight= 1 10 0 0 100 // target height in percent of screen height
+Application:Speller%20Targets:P3SpellerTask floatlist TargetTextHeight= 1 4.5 0 0 100 // height of target labels in percent of screen height
+Application:Speller%20Targets:P3SpellerTask floatlist TargetWidth= 1 12 0 0 100 // target width in percent of screen width
+Application:Speller:P3SpellerTask int TestMode= 1 0 0 1 // select targets by clicking on their associated stimuli (0=no, 1=yes) (boolean)
+Application:Speller%20Targets:P3SpellerTask stringlist TextColor= 1 0x00555555 0x505050 % % // text color (color)
+Application:Speller%20Targets:P3SpellerTask stringlist TextColorIntensified= 1 0x00FFFFFF 0x505050 % % // intensified text color (color)
+Application:Speller:P3SpellerTask string TextResult= % // user spelling result
+Application:Speller:P3SpellerTask string TextToSpell= THE // character or string to spell in offline copy mode
+Application:Text%20Window:P3SpellerTask int TextWindowEnabled= 0 0 0 1 // Show Text Window (0=no, 1=yes) (boolean)
+Application:Text%20Window:P3SpellerTask string TextWindowFilePath= % // Path for Saved Text File (directory)
+Application:Text%20Window:P3SpellerTask string TextWindowFontName= Courier // Text Window Font Name
+Application:Text%20Window:P3SpellerTask int TextWindowFontSize= 10 4 1 % // Text Window Font Size
+Application:Text%20Window:P3SpellerTask int TextWindowHeight= 512 512 0 % // Text Window Height
+Application:Text%20Window:P3SpellerTask int TextWindowLeft= 640 0 0 % // Text Window X location
+Application:Text%20Window:P3SpellerTask int TextWindowTop= 0 0 0 % // Text Window Y location
+Application:Text%20Window:P3SpellerTask int TextWindowWidth= 512 512 0 % // Text Window Width
+Source:Online%20Processing list TransmitChList= 8 1 2 3 4 5 6 7 8 1 1 128 // list of transmitted channels
+Application:Checkerboard:P3SpellerTask string UDPHost= 127.0.0.1:12000 // Host:Port of external presentation application
+Visualize:Processing%20Stages int VisualizeAlignmentFilter= 0 0 0 1 // Visualize AlignmentFilter output (boolean)
+Visualize:Application%20Window:ApplicationBase:%:DisplayVisualization int VisualizeApplicationWindow= 0 0 0 1 // Display miniature copy of application window (boolean)
+Visualize:Processing%20Stages int VisualizeLinearClassifier= 0 0 0 1 // Visualize LinearClassifier output (boolean)
+Visualize:P3TemporalFilter int VisualizeP3TemporalFiltering= 0 0 0 1 // Visualize averaged epochs (0=no 1=yes) (boolean)
+Visualize:Source%20Signal:DataIOFilter int VisualizeSource= 1 1 0 1 // visualize raw brain signal (0=no, 1=yes) (boolean)
+Visualize:Source%20Signal:DataIOFilter int VisualizeSourceDecimation= 1 1 1 % // decimation factor for raw brain signal
+Visualize:Source%20Signal:DataIOFilter int VisualizeSourceTime= 2 2 0 % // how much time in Source visualization
+Visualize:Processing%20Stages int VisualizeSpatialFilter= 0 0 0 1 // Visualize SpatialFilter output (boolean)
+Visualize:Timing:DataIOFilter int VisualizeTiming= 0 1 0 1 // visualize system timing (0=no, 1=yes) (boolean)
+Visualize:Processing%20Stages int VisualizeTransmissionFilter= 0 0 0 1 // Visualize TransmissionFilter output (boolean)
+Application:Window:StimulusTask string WindowBackgroundColor= 0x000000 0x505050 % % // background color (color)
+Application:Window:ApplicationBase int WindowHeight= 720 480 0 % // height of application window
+Application:Window:ApplicationBase int WindowLeft= -1400 0 % % // screen coordinate of application window's left edge
+Application:Window:ApplicationBase int WindowTop= 0 0 % % // screen coordinate of application window's top edge
+Application:Window:ApplicationBase int WindowWidth= 840 640 0 % // width of application window
